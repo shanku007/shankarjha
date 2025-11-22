@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, MapPin, GraduationCap, Heart, Users, Briefcase, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, GraduationCap, Heart, Users, Briefcase, ArrowRight, Brain, Target, Home, Compass, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import {
@@ -136,10 +136,121 @@ export default function PersonalPage() {
               </CardHeader>
               <CardContent className="space-y-4 relative z-10">
                 <p className="text-foreground/80 leading-relaxed">
-                  I was born in <span className="font-semibold text-blue-600">Harari village</span> of Madhubani District, Bihar. I spent my early life in Bihar itself and moved to Delhi where I completed my 10th from <span className="font-semibold">Govt. Co-ed Senior Secondary School RK Puram</span>, New Delhi, and 12th from the same school.
+                  I was born in <span className="font-semibold text-blue-600">Harari village</span> of Madhubani District, Bihar. I spent my early life in Bihar itself and moved to Delhi where I started my schooling. I completed my 10th from <span className="font-semibold">Govt. Co-ed Senior Secondary School RK Puram</span>, New Delhi, and 12th from the same school.
                 </p>
                 <p className="text-foreground/80 leading-relaxed">
                   I completed my <span className="font-semibold text-purple-600">B.Tech in Information Technology</span> from Bharati Vidyapeeth College of Engineering, which falls under Guru Gobind Singh Indraprastha University.
+                </p>
+                <div className="pt-4 border-t border-border/50">
+                  <p className="text-sm text-foreground/60">
+                    <span className="font-semibold text-foreground/80">Political Ideology:</span> Center-Right
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal Insights Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Sparkles className="h-8 w-8 text-purple-600" />
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Personal Insights
+              </h2>
+            </div>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
+            <p className="mt-6 text-lg text-foreground/70 max-w-2xl mx-auto">
+              A deeper look into my worldview, values, and aspirations
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {/* Spirituality & Science */}
+            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group">
+              <CardHeader>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-purple-100 to-pink-100">
+                    <Brain className="h-5 w-5 text-purple-600" />
+                  </div>
+                  <CardTitle className="text-xl">Spirituality & Science</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="relative z-10 space-y-3">
+                <p className="text-foreground/80 leading-relaxed">
+                  I am a <span className="font-semibold text-purple-600">spiritual person, not religious</span>. My spiritual journey is deeply personal and transcends traditional religious boundaries, allowing me to explore the profound questions of existence through introspection and inner wisdom.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  I am a <span className="font-semibold text-blue-600">proponent of science and scientific temper</span>. I believe in evidence-based thinking, critical inquiry, and the power of rational analysis to understand the world around us. Science and spirituality, in my view, are not contradictory but complementary paths to truth.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Practicality & Balance */}
+            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group">
+              <CardHeader>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-blue-100 to-cyan-100">
+                    <Heart className="h-5 w-5 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-xl">Practicality & Balance</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="relative z-10 space-y-3">
+                <p className="text-foreground/80 leading-relaxed">
+                  I am, for all purposes, a <span className="font-semibold text-blue-600">practical person</span>. While I experience emotions deeply and authentically, I don't let them overpower my judgment. I believe in balancing heart and mind, allowing emotions to inform but not dictate my decisions.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  I <span className="font-semibold text-purple-600">respect culture appropriately</span>, but I see it through the logical understanding of time—where it began, how it evolved, and its relevance in the contemporary world. Tradition gains meaning when understood contextually, not blindly followed.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Goals & Aspirations */}
+            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group">
+              <CardHeader>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-green-400/10 to-emerald-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-green-100 to-emerald-100">
+                    <Target className="h-5 w-5 text-green-600" />
+                  </div>
+                  <CardTitle className="text-xl">Goals & Aspirations</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="relative z-10 space-y-3">
+                <p className="text-foreground/80 leading-relaxed">
+                  My <span className="font-semibold text-green-600">short-term goal</span> is to complete Wizcart, bringing this innovative service provider platform to full fruition and making it a valuable tool for connecting people with skilled professionals.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  My <span className="font-semibold text-blue-600">near-term goal</span> is to create a software startup that can be genuinely useful to people, solving real-world problems at scale. I envision building it into a <span className="font-semibold text-purple-600">decacorn company</span>—a testament to the power of technology to create meaningful impact.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Lifestyle & Preferences */}
+            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group">
+              <CardHeader>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-orange-400/10 to-amber-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-orange-100 to-amber-100">
+                    <Home className="h-5 w-5 text-orange-600" />
+                  </div>
+                  <CardTitle className="text-xl">Lifestyle & Preferences</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="relative z-10 space-y-3">
+                <p className="text-foreground/80 leading-relaxed">
+                  I <span className="font-semibold text-orange-600">prefer the village environment</span>—the tranquility, the connection to nature, and the simplicity of life. However, <span className="font-semibold text-blue-600">digital access is essential</span> for me, as it enables me to build, create, and stay connected with the global community.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  I don't have much preference for travel in general, but <span className="font-semibold text-purple-600">places that are unique and unexplored</span> attract me. There's something compelling about discovering hidden gems, experiencing authentic cultures, and venturing off the beaten path.
                 </p>
               </CardContent>
             </Card>

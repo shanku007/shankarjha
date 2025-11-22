@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageProtection from "@/components/ImageProtection";
+import Clarity from "@/components/Clarity";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Clarity />
         <ImageProtection />
         <Script
           src="https://www.instagram.com/embed.js"

@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /images/
+Disallow: /images/personal/
+Disallow: /images/professional/
+
+# Allow all other content
+Allow: /
+
+# Block image scrapers specifically
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /images/
+
+User-agent: Slurp
+Disallow: /images/
+

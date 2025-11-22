@@ -1,0 +1,7 @@
+# Security.txt file
+# This file helps prevent unauthorized access to sensitive resources
+
+# Disallow image scraping
+User-Agent: *
+Disallow: /images/
+

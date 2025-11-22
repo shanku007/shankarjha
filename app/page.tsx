@@ -3,6 +3,7 @@
 import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
 import WizcartSection from "@/components/WizcartSection";
+import ConsenkoSection from "@/components/ConsenkoSection";
 import PhilosophiesSection from "@/components/PhilosophiesSection";
 import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import { Button } from "@/components/ui/button";
@@ -164,6 +165,9 @@ export default function Home() {
 
       {/* Wizcart Section */}
       <WizcartSection />
+
+      {/* Consenko Section */}
+      <ConsenkoSection />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">

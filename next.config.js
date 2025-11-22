@@ -3,19 +3,19 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: '**.cdninstagram.com',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "**.cdninstagram.com",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: '**.fbcdn.net',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "**.fbcdn.net",
+        pathname: "/**",
       },
     ],
     dangerouslyAllowSVG: false,
@@ -23,19 +23,19 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/images/:path*',
+        source: "/images/:path*",
         headers: [
           {
-            key: 'X-Robots-Tag',
-            value: 'noindex, nofollow, noimageindex',
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noimageindex",
           },
           {
-            key: 'Referrer-Policy',
-            value: 'no-referrer',
+            key: "Referrer-Policy",
+            value: "no-referrer",
           },
           {
-            key: 'Cache-Control',
-            value: 'private, no-cache, no-store, must-revalidate',
+            key: "Cache-Control",
+            value: "private, no-cache, no-store, must-revalidate",
           },
         ],
       },
@@ -44,4 +44,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-

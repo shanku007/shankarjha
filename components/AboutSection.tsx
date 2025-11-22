@@ -1,9 +1,10 @@
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail } from "lucide-react";
+import { Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ObfuscatedEmail from "@/components/ObfuscatedEmail";
+import Link from "next/link";
 
 export default function AboutSection() {
     const skills = [
@@ -29,12 +30,14 @@ export default function AboutSection() {
             role: "Director",
             period: "February 2025 - Present",
             location: "Noida, Uttar Pradesh, India",
+            website: "https://www.consenko.com",
         },
         {
             company: "Wizcart Technologies LLC",
             role: "Engineering Lead",
             period: "February 2025 - Present",
             location: "Noida, Uttar Pradesh, India",
+            website: "https://wizcart.com",
         },
         {
             company: "AVIZVA",
@@ -176,21 +179,33 @@ export default function AboutSection() {
                     <CardContent className="relative z-10">
                         <div className="space-y-6">
                             {experience.map((exp, index) => (
-                                <div
-                                    key={index}
+                                <div 
+                                    key={index} 
                                     className="relative pl-6 py-4 hover:bg-gradient-to-r hover:from-blue-50/50 hover:to-purple-50/50 rounded-r-lg transition-all duration-300 group border-l-4"
                                     style={{
                                         borderLeftColor: index === 0 ? '#3b82f6' : index === 1 ? '#9333ea' : '#ec4899',
                                     }}
                                 >
-                                    <div
+                                    <div 
                                         className="absolute -left-2 top-6 w-4 h-4 rounded-full group-hover:scale-125 transition-transform"
                                         style={{
                                             backgroundColor: index === 0 ? '#3b82f6' : index === 1 ? '#9333ea' : '#ec4899',
                                         }}
                                     ></div>
                                     <h3 className="font-bold text-lg group-hover:text-blue-600 transition-colors">{exp.role}</h3>
-                                    <p className="text-blue-600 font-medium">{exp.company}</p>
+                                    {exp.website ? (
+                                        <Link 
+                                            href={exp.website} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 font-medium hover:text-blue-700 transition-colors inline-flex items-center gap-1 group/link"
+                                        >
+                                            {exp.company}
+                                            <ExternalLink className="h-3 w-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                                        </Link>
+                                    ) : (
+                                        <p className="text-blue-600 font-medium">{exp.company}</p>
+                                    )}
                                     <p className="text-sm text-muted-foreground">{exp.period} • {exp.location}</p>
                                 </div>
                             ))}

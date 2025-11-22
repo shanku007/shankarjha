@@ -276,7 +276,7 @@ export default function PersonalPage() {
                 I'm currently working as an <span className="font-semibold text-blue-600">Engineering Lead & Product Builder</span>, specializing in building scalable SaaS platforms and fintech solutions. I help founders and teams transform ideas into market-ready tech products, with expertise in full-stack development, machine learning, and 0→1 product building.
               </p>
               <p className="text-foreground/70 leading-relaxed">
-                Currently serving as <span className="font-semibold">Director at Consenko Studios</span> and <span className="font-semibold">Engineering Lead at Wizcart Technologies</span>, where I lead engineering teams and build innovative platforms that connect users with skilled and verified service providers.
+                Currently serving as <span className="font-semibold">Director at <Link href="https://www.consenko.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors underline">Consenko Studios</Link></span> and <span className="font-semibold">Engineering Lead at Wizcart Technologies</span>, where I lead engineering teams and build innovative platforms that connect users with skilled and verified service providers.
               </p>
               <div className="pt-4">
                 <Button asChild className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">

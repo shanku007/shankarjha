@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, ExternalLink } from "lucide-react";
+import { Mail, ExternalLink, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import Link from "next/link";
@@ -44,6 +44,7 @@ export default function AboutSection() {
             role: "Senior Development Engineer - Applied Machine Learning",
             period: "April 2023 - February 2025",
             location: "Gurugram, Haryana, India",
+            website: "https://www.avizva.com",
         },
     ];
 
@@ -96,10 +97,60 @@ export default function AboutSection() {
                                 </div>
                             </CardContent>
                         </Card>
+
+                        <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+                            <CardHeader className="relative">
+                                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-bl-full"></div>
+                                <CardTitle className="text-xl relative z-10 flex items-center gap-2">
+                                    <span className="w-1 h-6 bg-gradient-to-b from-yellow-600 to-orange-600 rounded-full"></span>
+                                    Certifications
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="relative z-10">
+                                <ul className="space-y-3">
+                                    {certifications.map((cert, index) => (
+                                        <li key={index} className="flex items-start group">
+                                            <span className="text-blue-600 mr-3 mt-1 group-hover:scale-125 transition-transform">✓</span>
+                                            <span className="text-sm text-foreground/80 group-hover:text-foreground transition-colors">{cert}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
                     </div>
 
-                    {/* Skills & Certifications */}
+                    {/* Right Column */}
                     <div className="space-y-6">
+                        <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+                            <CardHeader className="relative">
+                                <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 rounded-br-full"></div>
+                                <CardTitle className="text-xl relative z-10 flex items-center gap-2">
+                                    <GraduationCap className="h-5 w-5 text-indigo-600" />
+                                    <span className="w-1 h-6 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full"></span>
+                                    Education
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="relative z-10">
+                                <div className="space-y-4">
+                                    <div className="p-3 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                                        <h4 className="font-semibold text-indigo-900">B.Tech, Information Technology</h4>
+                                        <p className="text-sm text-foreground/70">Bharati Vidyapeeth College of Engineering</p>
+                                        <p className="text-xs text-foreground/60 mt-1">Guru Gobind Singh Indraprastha University • 2016 - 2020</p>
+                                    </div>
+                                    <div className="p-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg">
+                                        <h4 className="font-semibold text-blue-900">12th Standard</h4>
+                                        <p className="text-sm text-foreground/70">Govt. Co-ed Senior Secondary School RK Puram</p>
+                                        <p className="text-xs text-foreground/60 mt-1">New Delhi</p>
+                                    </div>
+                                    <div className="p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
+                                        <h4 className="font-semibold text-purple-900">10th Standard</h4>
+                                        <p className="text-sm text-foreground/70">Govt. Co-ed Senior Secondary School RK Puram</p>
+                                        <p className="text-xs text-foreground/60 mt-1">New Delhi</p>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+
                         <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
                             <CardHeader className="relative">
                                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-bl-full"></div>
@@ -142,26 +193,6 @@ export default function AboutSection() {
                                         <span className="text-sm text-muted-foreground bg-white px-3 py-1 rounded-full">Full Professional</span>
                                     </div>
                                 </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
-                            <CardHeader className="relative">
-                                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-bl-full"></div>
-                                <CardTitle className="text-xl relative z-10 flex items-center gap-2">
-                                    <span className="w-1 h-6 bg-gradient-to-b from-yellow-600 to-orange-600 rounded-full"></span>
-                                    Certifications
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="relative z-10">
-                                <ul className="space-y-3">
-                                    {certifications.map((cert, index) => (
-                                        <li key={index} className="flex items-start group">
-                                            <span className="text-blue-600 mr-3 mt-1 group-hover:scale-125 transition-transform">✓</span>
-                                            <span className="text-sm text-foreground/80 group-hover:text-foreground transition-colors">{cert}</span>
-                                        </li>
-                                    ))}
-                                </ul>
                             </CardContent>
                         </Card>
                     </div>

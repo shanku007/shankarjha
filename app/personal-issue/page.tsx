@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, MapPin, GraduationCap, Heart, Users, Briefcase, ArrowRight, Brain, Target, Home, Compass, Sparkles } from "lucide-react";
+import { Calendar, MapPin, GraduationCap, Heart, Users, Briefcase, ArrowRight, Brain, Target, Home, Compass, Sparkles, Ruler } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import {
@@ -88,11 +88,11 @@ export default function PersonalPage() {
         </div>
       </section>
 
-      {/* Background & Birth Information */}
+      {/* Background & Personal Details */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Birth Information */}
+            {/* Personal Details */}
             <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
               <CardHeader className="relative">
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-bl-full"></div>
@@ -100,7 +100,7 @@ export default function PersonalPage() {
                   <div className="p-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500">
                     <Calendar className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-2xl">Birth Information</CardTitle>
+                  <CardTitle className="text-2xl">Personal Details</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4 relative z-10">
@@ -119,6 +119,20 @@ export default function PersonalPage() {
                       <p className="text-foreground/70">Harari village, Madhubani District, Bihar, India</p>
                     </div>
                   </div>
+                  <div className="flex items-start gap-3">
+                    <Home className="h-5 w-5 text-blue-600 mt-1" />
+                    <div>
+                      <p className="font-semibold">Current Residence</p>
+                      <p className="text-foreground/70">New Delhi, India</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Ruler className="h-5 w-5 text-green-600 mt-1" />
+                    <div>
+                      <p className="font-semibold">Height</p>
+                      <p className="text-foreground/70">5'11"</p>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -129,17 +143,14 @@ export default function PersonalPage() {
                 <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-br-full"></div>
                 <div className="flex items-center gap-3 relative z-10">
                   <div className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500">
-                    <GraduationCap className="h-6 w-6 text-white" />
+                    <Compass className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-2xl">Background</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4 relative z-10">
                 <p className="text-foreground/80 leading-relaxed">
-                  I was born in <span className="font-semibold text-blue-600">Harari village</span> of Madhubani District, Bihar. I spent my early life in Bihar itself and moved to Delhi where I started my schooling. I completed my 10th from <span className="font-semibold">Govt. Co-ed Senior Secondary School RK Puram</span>, New Delhi, and 12th from the same school.
-                </p>
-                <p className="text-foreground/80 leading-relaxed">
-                  I completed my <span className="font-semibold text-purple-600">B.Tech in Information Technology</span> from Bharati Vidyapeeth College of Engineering, which falls under Guru Gobind Singh Indraprastha University.
+                  I was born in <span className="font-semibold text-blue-600">Harari village</span> of Madhubani District, Bihar. I spent my early life in Bihar itself and moved to Delhi where I started my schooling.
                 </p>
                 <div className="pt-4 border-t border-border/50">
                   <p className="text-sm text-foreground/60">
@@ -149,6 +160,40 @@ export default function PersonalPage() {
               </CardContent>
             </Card>
           </div>
+
+          {/* Education Section */}
+          <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm mt-8">
+            <CardHeader className="relative">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 rounded-bl-full"></div>
+              <div className="flex items-center gap-3 relative z-10">
+                <div className="p-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500">
+                  <GraduationCap className="h-6 w-6 text-white" />
+                </div>
+                <CardTitle className="text-2xl">Education</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6 relative z-10">
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border border-indigo-100 hover:shadow-md transition-all">
+                  <h4 className="font-semibold text-indigo-900 text-lg mb-2">B.Tech</h4>
+                  <p className="text-sm font-medium text-foreground/80">Information Technology</p>
+                  <p className="text-sm text-foreground/70 mt-1">Bharati Vidyapeeth College of Engineering</p>
+                  <p className="text-xs text-foreground/60 mt-2">Guru Gobind Singh Indraprastha University</p>
+                  <p className="text-xs text-indigo-600 font-medium mt-2">2016 - 2020</p>
+                </div>
+                <div className="p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border border-blue-100 hover:shadow-md transition-all">
+                  <h4 className="font-semibold text-blue-900 text-lg mb-2">12th Standard</h4>
+                  <p className="text-sm text-foreground/70 mt-1">Govt. Co-ed Senior Secondary School RK Puram</p>
+                  <p className="text-xs text-foreground/60 mt-2">New Delhi, India</p>
+                </div>
+                <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-100 hover:shadow-md transition-all">
+                  <h4 className="font-semibold text-purple-900 text-lg mb-2">10th Standard</h4>
+                  <p className="text-sm text-foreground/70 mt-1">Govt. Co-ed Senior Secondary School RK Puram</p>
+                  <p className="text-xs text-foreground/60 mt-2">New Delhi, India</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

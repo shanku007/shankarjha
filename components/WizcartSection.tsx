@@ -21,57 +21,89 @@ export default function WizcartSection() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div>
           <p className="mt-6 text-lg text-foreground/70 max-w-2xl mx-auto">
-            Currently working on Wizcart - An online platform connecting you with skilled and verified service providers
+            Projects I'm currently building and working on
           </p>
         </div>
 
-        <Card className="border-2 shadow-2xl bg-white/80 backdrop-blur-sm overflow-hidden">
-          <CardHeader className="bg-gradient-to-r from-blue-50 to-purple-50 border-b">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg">
-                  <Globe className="h-6 w-6 text-white" />
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Wizcart */}
+          <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass overflow-hidden">
+            <CardHeader className="bg-gradient-to-r from-blue-50 to-purple-50 border-b border-violet-200/30">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 shadow-modern-lg">
+                    <Globe className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-2xl">Wizcart</CardTitle>
+                    <CardDescription className="text-base">
+                      Service Provider Platform
+                    </CardDescription>
+                  </div>
                 </div>
-                <div>
-                  <CardTitle className="text-2xl">Wizcart</CardTitle>
-                  <CardDescription className="text-base">
-                    Service Provider Platform
-                  </CardDescription>
-                </div>
-              </div>
-              <Button
-                asChild
-                variant="outline"
-                className="border-2"
-              >
-                <Link
-                  href="https://wizcart.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-2 border-violet-200 hover:border-violet-300"
+                  size="sm"
                 >
-                  Visit Website
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </CardHeader>
-          <CardContent className="p-6">
-            <p className="text-foreground/80 mb-4 leading-relaxed">
-              Wizcart is an online platform designed to connect you with a network of skilled and verified service providers. Whether you need professional services, expert consultation, or specialized assistance, Wizcart makes it easy to find and connect with the right service providers.
-            </p>
-            <div className="relative w-full bg-slate-100 rounded-lg overflow-hidden" style={{ paddingBottom: "75%", minHeight: "600px" }}>
-              <iframe
-                src="https://wizcart.com"
-                className="absolute top-0 left-0 w-full h-full border-0"
-                title="Wizcart Website"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-              />
-            </div>
-          </CardContent>
-        </Card>
+                  <Link
+                    href="https://wizcart.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </CardHeader>
+            <CardContent className="p-6">
+              <p className="text-foreground/80 mb-4 leading-relaxed">
+                An online platform connecting you with skilled and verified service providers. Whether you need professional services, expert consultation, or specialized assistance, Wizcart makes it easy to find and connect with the right service providers.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Khataai */}
+          <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass overflow-hidden">
+            <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 border-b border-violet-200/30">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="p-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 shadow-modern-lg">
+                    <Globe className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-2xl">Khataai</CardTitle>
+                    <CardDescription className="text-base">
+                      Developer Platform
+                    </CardDescription>
+                  </div>
+                </div>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-2 border-violet-200 hover:border-violet-300"
+                  size="sm"
+                >
+                  <Link
+                    href="https://dev.khataai.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </CardHeader>
+            <CardContent className="p-6">
+              <p className="text-foreground/80 mb-4 leading-relaxed">
+                A developer platform and tooling ecosystem designed to empower developers with the resources and tools they need to build better software faster.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
 
         <div className="mt-8 text-center">
           <p className="text-foreground/60 text-sm">

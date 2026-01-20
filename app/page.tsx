@@ -25,24 +25,24 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 bg-gradient-to-br from-slate-50 via-white to-purple-50/30 relative overflow-hidden">
         {/* Animated background decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-violet-300 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-fuchsia-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
 
         {/* Geometric shapes */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 border-4 border-blue-400/20 rotate-45 animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 border-4 border-purple-400/20 rotate-12 animate-float animation-delay-2000"></div>
-          <div className="absolute top-1/3 right-1/4 w-16 h-16 border-4 border-pink-400/20 rotate-45 animate-float animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 border-2 border-violet-400/30 rotate-45 animate-float rounded-2xl"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-purple-400/30 rotate-12 animate-float animation-delay-2000 rounded-xl"></div>
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 border-2 border-fuchsia-400/30 rotate-45 animate-float animation-delay-4000 rounded-lg"></div>
         </div>
 
         {/* Cursor follower effect */}
         <div
-          className="absolute w-96 h-96 rounded-full bg-gradient-to-r from-blue-400/10 to-purple-400/10 blur-3xl pointer-events-none transition-all duration-300 ease-out"
+          className="absolute w-96 h-96 rounded-full bg-gradient-to-r from-violet-400/15 to-purple-400/15 blur-3xl pointer-events-none transition-all duration-500 ease-out"
           style={{
             left: `${mousePosition.x - 192}px`,
             top: `${mousePosition.y - 192}px`,
@@ -53,32 +53,32 @@ export default function Home() {
           <div className="text-center space-y-8 animate-slide-in-up">
             {/* Icon badges */}
             <div className="flex justify-center gap-4 mb-6">
-              <div className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg animate-float">
-                <Code className="h-6 w-6 text-blue-600" />
+              <div className="p-3 glass rounded-full shadow-modern-lg animate-float hover:scale-110 transition-transform">
+                <Code className="h-6 w-6 text-violet-600" />
               </div>
-              <div className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg animate-float animation-delay-2000">
+              <div className="p-3 glass rounded-full shadow-modern-lg animate-float animation-delay-2000 hover:scale-110 transition-transform">
                 <Rocket className="h-6 w-6 text-purple-600" />
               </div>
-              <div className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg animate-float animation-delay-4000">
-                <Sparkles className="h-6 w-6 text-pink-600" />
+              <div className="p-3 glass rounded-full shadow-modern-lg animate-float animation-delay-4000 hover:scale-110 transition-transform">
+                <Sparkles className="h-6 w-6 text-fuchsia-600" />
               </div>
             </div>
 
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+                <span className="gradient-text">
                   Shankar Jha
                 </span>
               </h1>
               <div className="flex items-center justify-center gap-2 text-2xl md:text-3xl font-semibold text-foreground/80">
                 <span>Engineering Lead</span>
-                <span className="text-blue-600">×</span>
+                <span className="text-violet-600">×</span>
                 <span>Product Builder</span>
               </div>
-              <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
-                Transforming ideas into <span className="font-semibold text-blue-600">scalable</span>, market-ready tech products
+              <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+                Transforming ideas into <span className="font-semibold gradient-text bg-clip-text text-transparent">scalable</span>, market-ready tech products
                 <br />
-                <span className="text-base">Exploring SaaS, Compliance & FinTech</span>
+                <span className="text-base text-foreground/60">Exploring SaaS, Compliance & FinTech</span>
               </p>
             </div>
 
@@ -86,7 +86,7 @@ export default function Home() {
               <Button 
                 asChild 
                 size="lg" 
-                className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-pulse-glow"
+                className="text-lg px-8 py-6 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 shadow-modern-lg hover:shadow-glow transition-all duration-300 hover:scale-105"
               >
                 <Link href="#about">
                   Learn More About Me
@@ -96,7 +96,7 @@ export default function Home() {
                 asChild 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-8 py-6 border-2 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 hover:scale-105"
+                className="text-lg px-8 py-6 border-2 border-violet-200 hover:bg-gradient-to-r hover:from-violet-50 hover:to-purple-50 hover:border-violet-300 transition-all duration-300 hover:scale-105"
               >
                 <ObfuscatedEmail className="flex items-center">
                   <Mail className="mr-2 h-5 w-5" />
@@ -113,7 +113,7 @@ export default function Home() {
                   href="https://www.instagram.com/_shankar.jha/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 group"
+                  className="p-3 glass rounded-full shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 group"
                   aria-label="Instagram"
                 >
                   <svg className="h-6 w-6 text-pink-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export default function Home() {
                   href="https://x.com/ShankarJha_"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-sky-400 hover:to-blue-500 group"
+                  className="p-3 glass rounded-full shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-sky-400 hover:to-blue-500 group"
                   aria-label="Twitter"
                 >
                   <svg className="h-6 w-6 text-sky-500 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -135,10 +135,10 @@ export default function Home() {
                   href="https://www.linkedin.com/in/shankarjha29"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 group"
+                  className="p-3 glass rounded-full shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:scale-110 hover:bg-gradient-to-r hover:from-violet-600 hover:to-purple-600 group"
                   aria-label="LinkedIn"
                 >
-                  <svg className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-6 w-6 text-violet-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </a>
@@ -170,28 +170,28 @@ export default function Home() {
       <ConsenkoSection />
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         </div>
 
         {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <div className="inline-block mb-6 p-4 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-            <Mail className="h-8 w-8 text-blue-400" />
+          <div className="inline-block mb-6 p-4 glass-dark rounded-full border border-white/10 shadow-modern-lg">
+            <Mail className="h-8 w-8 text-violet-400" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
             Let's Build Something Together
           </h2>
           <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Whether you're validating an idea or scaling early traction, I bring full-stack engineering, product thinking, and a founder's mindset to your build.
           </p>
           <ObfuscatedEmail 
-            className="inline-flex items-center justify-center text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-md font-medium" 
+            className="inline-flex items-center justify-center text-lg px-8 py-6 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white shadow-modern-lg hover:shadow-glow transition-all duration-300 hover:scale-105 rounded-lg font-medium" 
             showText={true}
           >
             <Mail className="mr-2 h-5 w-5" />

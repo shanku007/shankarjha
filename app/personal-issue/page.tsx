@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, MapPin, GraduationCap, Heart, Users, Briefcase, ArrowRight, Brain, Target, Home, Compass, Sparkles, Ruler } from "lucide-react";
+import { Calendar, MapPin, GraduationCap, Heart, Users, Briefcase, ArrowRight, Brain, Target, Home, Compass, Sparkles, Ruler, Music, Utensils, Code, Rocket, Activity } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import {
@@ -40,6 +40,49 @@ export default function PersonalPage() {
     fetchImages();
   }, []);
 
+  const hobbies = [
+    {
+      title: "Sports",
+      description: "Staying active through sports keeps me grounded and energized, whether it's cricket, football, or any competitive activity that challenges both body and mind.",
+      icon: Activity,
+      gradient: "from-green-100 to-emerald-100",
+      iconColor: "text-green-600",
+      bgGradient: "from-green-400/10 to-emerald-400/10",
+    },
+    {
+      title: "Startups & Entrepreneurship",
+      description: "I'm passionate about the startup ecosystem—from ideation to execution, learning from founders, and understanding what makes products succeed in the market.",
+      icon: Rocket,
+      gradient: "from-blue-100 to-cyan-100",
+      iconColor: "text-blue-600",
+      bgGradient: "from-blue-400/10 to-cyan-400/10",
+    },
+    {
+      title: "Building Side Projects",
+      description: "I love hacking on side projects and experimenting with new technologies. It's where I learn fastest and turn curiosity into working prototypes.",
+      icon: Code,
+      gradient: "from-purple-100 to-pink-100",
+      iconColor: "text-purple-600",
+      bgGradient: "from-purple-400/10 to-pink-400/10",
+    },
+    {
+      title: "Music",
+      description: "Music is a constant companion—whether listening to explore new sounds or using it as a backdrop for deep work and reflection.",
+      icon: Music,
+      gradient: "from-pink-100 to-rose-100",
+      iconColor: "text-pink-600",
+      bgGradient: "from-pink-400/10 to-rose-400/10",
+    },
+    {
+      title: "Cooking",
+      description: "Experimenting in the kitchen is both creative and practical. I enjoy trying new recipes and techniques, turning cooking into a form of mindful practice.",
+      icon: Utensils,
+      gradient: "from-orange-100 to-amber-100",
+      iconColor: "text-orange-600",
+      bgGradient: "from-orange-400/10 to-amber-400/10",
+    },
+  ];
+
   const philosophies = [
     {
       title: "Advaita - Oneness",
@@ -70,19 +113,19 @@ export default function PersonalPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
-      <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 relative overflow-hidden mt-20">
+      <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-purple-50/30 relative overflow-hidden mt-20">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-violet-200/25 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/25 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">
               Personal Journey
             </h1>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              A glimpse into my background, values, and the people who matter most
+              A glimpse into my background, education, values, interests, and the people who matter most
             </p>
           </div>
         </div>
@@ -93,7 +136,7 @@ export default function PersonalPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Personal Details */}
-            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+            <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass">
               <CardHeader className="relative">
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-bl-full"></div>
                 <div className="flex items-center gap-3 relative z-10">
@@ -138,7 +181,7 @@ export default function PersonalPage() {
             </Card>
 
             {/* Background */}
-            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+            <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass">
               <CardHeader className="relative">
                 <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-br-full"></div>
                 <div className="flex items-center gap-3 relative z-10">
@@ -162,7 +205,7 @@ export default function PersonalPage() {
           </div>
 
           {/* Education Section */}
-          <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm mt-8">
+          <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass mt-8">
             <CardHeader className="relative">
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 rounded-bl-full"></div>
               <div className="flex items-center gap-3 relative z-10">
@@ -203,19 +246,19 @@ export default function PersonalPage() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Sparkles className="h-8 w-8 text-purple-600" />
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold gradient-text">
                 Personal Insights
               </h2>
             </div>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
             <p className="mt-6 text-lg text-foreground/70 max-w-2xl mx-auto">
-              A deeper look into my worldview, values, and aspirations
+              A deeper look into my worldview, values, and entrepreneurial aspirations
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Spirituality & Science */}
-            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group">
+            <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-2 glass group">
               <CardHeader>
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>
                 <div className="flex items-center gap-3 relative z-10">
@@ -236,7 +279,7 @@ export default function PersonalPage() {
             </Card>
 
             {/* Practicality & Balance */}
-            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group">
+            <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-2 glass group">
               <CardHeader>
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>
                 <div className="flex items-center gap-3 relative z-10">
@@ -259,7 +302,7 @@ export default function PersonalPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Goals & Aspirations */}
-            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group">
+            <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-2 glass group">
               <CardHeader>
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-green-400/10 to-emerald-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>
                 <div className="flex items-center gap-3 relative z-10">
@@ -271,16 +314,16 @@ export default function PersonalPage() {
               </CardHeader>
               <CardContent className="relative z-10 space-y-3">
                 <p className="text-foreground/80 leading-relaxed">
-                  My <span className="font-semibold text-green-600">short-term goal</span> is to complete Wizcart, bringing this innovative service provider platform to full fruition and making it a valuable tool for connecting people with skilled professionals.
+                  My <span className="font-semibold text-green-600">primary goal</span> is to build a software startup that solves real-world problems and creates meaningful impact at scale. I'm focused on execution, finding product-market fit, and compounding learning through building.
                 </p>
                 <p className="text-foreground/80 leading-relaxed">
-                  My <span className="font-semibold text-blue-600">near-term goal</span> is to create a software startup that can be genuinely useful to people, solving real-world problems at scale. I envision building it into a <span className="font-semibold text-purple-600">decacorn company</span>—a testament to the power of technology to create meaningful impact.
+                  Entrepreneurship is my path forward—transforming ideas into products that matter, building teams that execute, and creating value that compounds over time. Every day is about moving closer to launching something that genuinely helps people.
                 </p>
               </CardContent>
             </Card>
 
             {/* Lifestyle & Preferences */}
-            <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group">
+            <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-2 glass group">
               <CardHeader>
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-orange-400/10 to-amber-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>
                 <div className="flex items-center gap-3 relative z-10">
@@ -303,10 +346,47 @@ export default function PersonalPage() {
         </div>
       </section>
 
+      {/* Hobbies & Interests Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Sparkles className="h-8 w-8 text-purple-600" />
+              <h2 className="text-4xl md:text-5xl font-bold gradient-text">
+                Hobbies & Interests
+              </h2>
+            </div>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
+            <p className="mt-6 text-lg text-foreground/70 max-w-2xl mx-auto">
+              Activities and passions that shape who I am beyond work
+            </p>
+          </div>
+
+          {/* Hobbies as Chips */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {hobbies.map((hobby, index) => {
+              const Icon = hobby.icon;
+              return (
+                <div
+                  key={index}
+                  className={`group relative inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-violet-200/50 bg-gradient-to-r ${hobby.gradient} shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1 cursor-default`}
+                >
+                  <Icon className={`h-4 w-4 ${hobby.iconColor} transition-transform group-hover:scale-110`} />
+                  <span className={`font-medium text-sm ${hobby.iconColor}`}>
+                    {hobby.title}
+                  </span>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Professional Portfolio Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto max-w-6xl">
-          <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+          <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 glass relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-bl-full"></div>
             <CardHeader className="relative z-10">
               <div className="flex items-center gap-3 mb-4">
@@ -324,7 +404,7 @@ export default function PersonalPage() {
                 Currently serving as <span className="font-semibold">Director at <Link href="https://www.consenko.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors underline">Consenko Studios</Link></span> and <span className="font-semibold">Engineering Lead at Wizcart Technologies</span>, where I lead engineering teams and build innovative platforms that connect users with skilled and verified service providers.
               </p>
               <div className="pt-4">
-                <Button asChild className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                <Button asChild className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white shadow-modern-lg hover:shadow-glow">
                   <Link href="/">
                     Know More
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -343,7 +423,7 @@ export default function PersonalPage() {
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
-            <Card className="border-2 shadow-lg bg-white/80 backdrop-blur-sm inline-block max-w-md">
+              <Card className="border border-violet-200/50 shadow-modern glass inline-block max-w-md">
               <CardContent className="p-6">
                 <p className="text-sm text-foreground/60 mb-3">To know me more, contact me at:</p>
                 <ObfuscatedPhone className="text-lg font-semibold text-blue-600 hover:text-purple-600 transition-colors justify-center" />
@@ -359,7 +439,7 @@ export default function PersonalPage() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Users className="h-8 w-8 text-blue-600" />
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold gradient-text">
                 Family Photos
               </h2>
             </div>
@@ -382,7 +462,7 @@ export default function PersonalPage() {
               personalImages.map((image, index) => (
               <Card
                 key={index}
-                className="overflow-hidden border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group bg-white/80 backdrop-blur-sm"
+                className="overflow-hidden border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-2 cursor-pointer group glass"
                 onClick={() => setSelectedImage(image)}
                 data-image-protected="true"
               >
@@ -410,7 +490,7 @@ export default function PersonalPage() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Heart className="h-8 w-8 text-pink-600" />
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold gradient-text">
                 My Philosophies
               </h2>
             </div>
@@ -421,7 +501,7 @@ export default function PersonalPage() {
             {philosophies.map((philosophy, index) => (
               <Card
                 key={index}
-                className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm group"
+                className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-2 glass group"
               >
                 <CardHeader>
                   <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-pink-400/10 to-purple-400/10 rounded-bl-full group-hover:opacity-20 transition-opacity"></div>

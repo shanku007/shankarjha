@@ -52,27 +52,27 @@ export default function AboutSection() {
         <section id="about" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
             {/* Decorative background elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl"></div>
+                <div className="absolute top-0 right-0 w-96 h-96 bg-violet-200/15 rounded-full blur-3xl animate-blob"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/15 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
             </div>
 
             <div className="container mx-auto max-w-6xl relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
                         About Me
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-violet-600 to-purple-600 mx-auto rounded-full mb-4"></div>
                     <div className="flex justify-center gap-2 mt-4">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-violet-600 rounded-full animate-pulse"></div>
                         <div className="w-2 h-2 bg-purple-600 rounded-full animate-pulse animation-delay-2000"></div>
-                        <div className="w-2 h-2 bg-pink-600 rounded-full animate-pulse animation-delay-4000"></div>
+                        <div className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse animation-delay-4000"></div>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                     {/* Main Content */}
                     <div className="space-y-6">
-                        <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+                        <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass">
                             <CardHeader className="relative">
                                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-bl-full"></div>
                                 <CardTitle className="text-2xl relative z-10">Engineering Lead & Product Builder</CardTitle>
@@ -82,13 +82,13 @@ export default function AboutSection() {
                             </CardHeader>
                             <CardContent className="space-y-4 relative z-10">
                                 <p className="text-foreground/80 leading-relaxed">
-                                    I help founders and teams turn ideas into working software — <span className="font-semibold text-blue-600">fast</span>. As a software engineer and <span className="font-semibold text-purple-600">0→1 product builder</span>, I specialize in transforming vision into scalable, functional, and market-ready tech products. From building SaaS platforms to developing tools for compliance-heavy industries, I bring a bias for execution and a deep understanding of both product and code.
+                                    I help founders and teams turn ideas into working software — <span className="font-semibold text-violet-600">fast</span>. As a software engineer and <span className="font-semibold text-purple-600">0→1 product builder</span>, I specialize in transforming vision into scalable, functional, and market-ready tech products. From building SaaS platforms to developing tools for compliance-heavy industries, I bring a bias for execution and a deep understanding of both product and code.
                                 </p>
                                 <p className="text-foreground/80 leading-relaxed">
                                     I'm especially interested in collaborating with serial founders and SaaS operators looking to accelerate MVP development, and anyone solving real-world problems with technology. Whether you're validating an idea or scaling early traction, I bring full-stack engineering, product thinking, and a founder's mindset to your build.
                                 </p>
                                 <div className="pt-4">
-                                    <Button asChild variant="outline" className="w-full sm:w-auto border-2 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300">
+                                    <Button asChild variant="outline" className="w-full sm:w-auto border-2 border-violet-200 hover:bg-gradient-to-r hover:from-violet-50 hover:to-purple-50 hover:border-violet-300 transition-all duration-300">
                                         <ObfuscatedEmail className="flex items-center">
                                             <Mail className="mr-2 h-4 w-4" />
                                             Get in Touch
@@ -98,7 +98,7 @@ export default function AboutSection() {
                             </CardContent>
                         </Card>
 
-                        <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+                        <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass">
                             <CardHeader className="relative">
                                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-bl-full"></div>
                                 <CardTitle className="text-xl relative z-10 flex items-center gap-2">
@@ -121,7 +121,7 @@ export default function AboutSection() {
 
                     {/* Right Column */}
                     <div className="space-y-6">
-                        <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+                        <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass">
                             <CardHeader className="relative">
                                 <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 rounded-br-full"></div>
                                 <CardTitle className="text-xl relative z-10 flex items-center gap-2">
@@ -151,7 +151,7 @@ export default function AboutSection() {
                             </CardContent>
                         </Card>
 
-                        <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+                        <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass">
                             <CardHeader className="relative">
                                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-bl-full"></div>
                                 <CardTitle className="text-xl relative z-10 flex items-center gap-2">
@@ -174,7 +174,7 @@ export default function AboutSection() {
                             </CardContent>
                         </Card>
 
-                        <Card className="border-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
+                        <Card className="border border-violet-200/50 shadow-modern hover:shadow-modern-lg transition-all duration-300 hover:-translate-y-1 glass">
                             <CardHeader className="relative">
                                 <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-br-full"></div>
                                 <CardTitle className="text-xl relative z-10 flex items-center gap-2">

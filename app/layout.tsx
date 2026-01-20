@@ -14,6 +14,15 @@ export const metadata: Metadata = {
   description: "Engineering Lead & Product Builder (0→1) | Exploring SaaS, Compliance & FinTech | Building scalable tech products",
   keywords: ["Engineering Lead", "Software Engineer", "Product Builder", "SaaS", "FinTech", "Full Stack Developer"],
   authors: [{ name: "Shankar Jha" }],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+  },
   robots: {
     index: true,
     follow: true,

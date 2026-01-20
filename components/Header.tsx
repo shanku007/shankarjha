@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SignatureLogo from "@/components/SignatureLogo";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,17 +44,22 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMobileMenuOpen
-          ? "bg-background/80 backdrop-blur-md shadow-lg"
-          : "bg-white/60 backdrop-blur-sm"
+          ? "glass shadow-modern border-b border-violet-200/30"
+          : "bg-white/70 backdrop-blur-sm"
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16 md:h-20">
+          {/* Logo */}
+          <div className="mr-4 md:mr-8">
+            <SignatureLogo showText={false} className="h-8 md:h-10 w-auto" />
+          </div>
+
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden ml-auto"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -65,7 +71,7 @@ export default function Header() {
           </Button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 ml-0">
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -73,7 +79,7 @@ export default function Header() {
                 className="text-foreground/80 hover:text-foreground transition-all duration-300 font-medium relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
           </div>
@@ -81,7 +87,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md shadow-lg -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+          <div className="md:hidden py-4 border-t border-violet-200/30 glass shadow-modern -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}

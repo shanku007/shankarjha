@@ -76,7 +76,7 @@ export default function WizcartSection() {
                   <div>
                     <CardTitle className="text-2xl">Khataai</CardTitle>
                     <CardDescription className="text-base">
-                      Developer Platform
+                      On-Prem Agentic AI
                     </CardDescription>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function WizcartSection() {
                   size="sm"
                 >
                   <Link
-                    href="https://dev.khataai.in"
+                    href="https://khataai.in/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -99,7 +99,7 @@ export default function WizcartSection() {
             </CardHeader>
             <CardContent className="p-6">
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                A developer platform and tooling ecosystem designed to empower developers with the resources and tools they need to build better software faster.
+                Khataai is a Second Brain—an on-prem, agentic AI assistant built for businesses and MSMEs who want to own their stack rather than rent it. It classifies intent, extracts entities, and routes work to the right solution: updating records, searching the brain, scheduling reminders, drafting replies, and handling document uploads, all DPDP-friendly by construction.
               </p>
             </CardContent>
           </Card>

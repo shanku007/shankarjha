@@ -228,11 +228,13 @@ export default function PersonalPage() {
                   <h4 className="font-semibold text-blue-900 text-lg mb-2">12th Standard</h4>
                   <p className="text-sm text-foreground/70 mt-1">Govt. Co-ed Senior Secondary School RK Puram</p>
                   <p className="text-xs text-foreground/60 mt-2">New Delhi, India</p>
+                  <p className="text-xs text-blue-600 font-medium mt-2">95%</p>
                 </div>
                 <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-100 hover:shadow-md transition-all">
                   <h4 className="font-semibold text-purple-900 text-lg mb-2">10th Standard</h4>
                   <p className="text-sm text-foreground/70 mt-1">Govt. Co-ed Senior Secondary School RK Puram</p>
                   <p className="text-xs text-foreground/60 mt-2">New Delhi, India</p>
+                  <p className="text-xs text-purple-600 font-medium mt-2">9.6 CGPA</p>
                 </div>
               </div>
             </CardContent>
@@ -252,7 +254,7 @@ export default function PersonalPage() {
             </div>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
             <p className="mt-6 text-lg text-foreground/70 max-w-2xl mx-auto">
-              A deeper look into my worldview, values, and entrepreneurial aspirations
+              From a village in Madhubani to building software in Delhi—the worldview, values, and ambitions that drive how I live and what I build
             </p>
           </div>
 
@@ -270,10 +272,10 @@ export default function PersonalPage() {
               </CardHeader>
               <CardContent className="relative z-10 space-y-3">
                 <p className="text-foreground/80 leading-relaxed">
-                  I am a <span className="font-semibold text-purple-600">spiritual person, not religious</span>. My spiritual journey is deeply personal and transcends traditional religious boundaries, allowing me to explore the profound questions of existence through introspection and inner wisdom.
+                  I am <span className="font-semibold text-purple-600">spiritual, not religious</span>. Advaita's idea of oneness shapes how I see the world far more than any ritual does—I'd rather sit with the hard questions of existence through introspection than inherit answers secondhand.
                 </p>
                 <p className="text-foreground/80 leading-relaxed">
-                  I am a <span className="font-semibold text-blue-600">proponent of science and scientific temper</span>. I believe in evidence-based thinking, critical inquiry, and the power of rational analysis to understand the world around us. Science and spirituality, in my view, are not contradictory but complementary paths to truth.
+                  At the same time I'm a firm <span className="font-semibold text-blue-600">proponent of scientific temper</span>—evidence over assertion, inquiry over dogma. For me science and spirituality aren't rivals; both are honest attempts to get closer to what's true, and I refuse to give up either one.
                 </p>
               </CardContent>
             </Card>
@@ -291,10 +293,10 @@ export default function PersonalPage() {
               </CardHeader>
               <CardContent className="relative z-10 space-y-3">
                 <p className="text-foreground/80 leading-relaxed">
-                  I am, for all purposes, a <span className="font-semibold text-blue-600">practical person</span>. While I experience emotions deeply and authentically, I don't let them overpower my judgment. I believe in balancing heart and mind, allowing emotions to inform but not dictate my decisions.
+                  At core I'm a <span className="font-semibold text-blue-600">practical person</span>. I feel things deeply, but I don't let emotion drive—it gets a seat at the table, not the wheel. Engineering taught me to weigh trade-offs honestly, and I apply the same discipline to life as I do to code.
                 </p>
                 <p className="text-foreground/80 leading-relaxed">
-                  I <span className="font-semibold text-purple-600">respect culture appropriately</span>, but I see it through the logical understanding of time—where it began, how it evolved, and its relevance in the contemporary world. Tradition gains meaning when understood contextually, not blindly followed.
+                  I <span className="font-semibold text-purple-600">respect culture, but contextually</span>. I trace where a tradition came from, how it evolved, and whether it still earns its place today. That's also where my <span className="font-semibold text-foreground/80">center-right</span> instinct shows: keep what works, question what's merely inherited.
                 </p>
               </CardContent>
             </Card>
@@ -314,10 +316,10 @@ export default function PersonalPage() {
               </CardHeader>
               <CardContent className="relative z-10 space-y-3">
                 <p className="text-foreground/80 leading-relaxed">
-                  My <span className="font-semibold text-green-600">primary goal</span> is to build a software startup that solves real-world problems and creates meaningful impact at scale. I'm focused on execution, finding product-market fit, and compounding learning through building.
+                  My <span className="font-semibold text-green-600">primary goal</span> is to build a software startup that solves a real problem at scale. As an Engineering Lead and Director, I already live this daily—shipping fintech and SaaS platforms 0→1, chasing product-market fit, and compounding what I learn with every build.
                 </p>
                 <p className="text-foreground/80 leading-relaxed">
-                  Entrepreneurship is my path forward—transforming ideas into products that matter, building teams that execute, and creating value that compounds over time. Every day is about moving closer to launching something that genuinely helps people.
+                  Entrepreneurship isn't a someday plan; it's the path I'm already walking. Turning ideas into products that matter, building teams that execute, and creating value that compounds—that's the work I want to be doing for the rest of my life.
                 </p>
               </CardContent>
             </Card>
@@ -335,10 +337,10 @@ export default function PersonalPage() {
               </CardHeader>
               <CardContent className="relative z-10 space-y-3">
                 <p className="text-foreground/80 leading-relaxed">
-                  I <span className="font-semibold text-orange-600">prefer the village environment</span>—the tranquility, the connection to nature, and the simplicity of life. However, <span className="font-semibold text-blue-600">digital access is essential</span> for me, as it enables me to build, create, and stay connected with the global community.
+                  Having grown up in <span className="font-semibold text-orange-600">Harari village</span>, I still prefer that environment—the quiet, the closeness to nature, the simplicity. The one non-negotiable is <span className="font-semibold text-blue-600">strong digital access</span>: give me a fast connection and I can build from anywhere, village or city, no difference.
                 </p>
                 <p className="text-foreground/80 leading-relaxed">
-                  I don't have much preference for travel in general, but <span className="font-semibold text-purple-600">places that are unique and unexplored</span> attract me. There's something compelling about discovering hidden gems, experiencing authentic cultures, and venturing off the beaten path.
+                  I'm not much of a routine traveler, but <span className="font-semibold text-purple-600">unique, unexplored places</span> pull me in. Hidden corners, authentic cultures, paths most people skip—that's the kind of travel that feels worth the trip.
                 </p>
               </CardContent>
             </Card>
